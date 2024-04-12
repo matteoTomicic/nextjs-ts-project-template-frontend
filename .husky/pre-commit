@@ -1,0 +1,13 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo 'Linting and compiling TypeScript...'
+
+if yarn lint; then
+    echo 'Linting passed, no errors found.'
+else
+    echo 'Linting failed, attempting to fix errors...'
+    yarn lint-fix
+fi
+
+echo 'Congratulations! Your code is looking great and ready for liftoff! 🚀'

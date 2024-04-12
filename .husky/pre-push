@@ -1,0 +1,13 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "Running 'yarn build' to catch any potential bugs or errors. Stand by for lift-off!"
+
+yarn build ||
+(
+    echo "The 'yarn build' command failed. Let's fix those bugs and try again..."
+    false;
+)
+
+# If everything passes... Now we can commit
+echo "✅ Mission accomplished! The 'yarn build' is done and everything is fine. Let's push this code! ✅"
