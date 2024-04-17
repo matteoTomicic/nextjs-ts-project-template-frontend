@@ -6,5 +6,5 @@ export enum Breakpoints {
 
 export enum Device {
 	TABLET = `@media (min-width: ${Breakpoints.TABLET})`,
-	DESKTOP = `@media (min-width: ${Breakpoints.TABLET})`
+	DESKTOP = `@media (min-width: ${Breakpoints.DESKTOP})`
 }
